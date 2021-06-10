@@ -1,0 +1,28 @@
+{
+    "Student": [
+      {
+        "id": 1,
+        "studentName": "darpan",
+        "studentadd": "tithalroad",
+        "city": "valsad",
+        "state": "gujrat"
+        
+      },
+      {
+        "id": 2,
+        "studentName": "sandeep",
+        "studentadd": "tithal",
+        "city": "valsad",
+        "state": "gujrat"
+        
+      },
+      {
+        "id": 1,
+        "studentName": "yash",
+        "studentadd": "mgroad",
+        "city": "surat",
+        "state": "gujrat"
+        
+      }
+    ]
+  }
