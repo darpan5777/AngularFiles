@@ -6,7 +6,7 @@ const routes: Routes = [
   //   path:'',
   //   loadChildren:"src/app/student/student.module#StudentModule"
   // },
-  { path: '', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) }
+  { path: '', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule)}
 ];
 
 @NgModule({

@@ -9,7 +9,7 @@ import { StudentService } from 'src/app/Shared/student.service';
 })
 export class StudentAddComponent implements OnInit {
 
-  constructor(private studentservice:StudentService) { }
+  constructor() { }
 //addstudent(studentobj){
   //console.log(studentobj);
   //  this.studentservice.createstudent().subscribe((response)) =>{

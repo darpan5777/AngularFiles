@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-add',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add.component.scss']
 })
 export class AddComponent implements OnInit {
+   
+   constructor() { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {  
   }
 
+  
 }

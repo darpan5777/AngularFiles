@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { from, Observable, of } from 'rxjs';
-import {HttpClientModule,HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import {HttpClient,HttpHeaders } from '@angular/common/http';
 import { Student } from '../Model/student';
 
 const headerOption = {
@@ -12,24 +12,20 @@ const headerOption = {
   providedIn: 'root'
 })
 export class StudentService {
+  allstudent: Student[] = [];
 
-  mockUrl:string = 'http://localhost:3000/Student';
+ // mockUrl:string = 'http://localhost:3000/Student';
 
   constructor( 
-     private http : HttpClientModule
+     private http : HttpClient
 
   ) { }
-  
-  getAllEmployee():Observable<Student> {
-    return of()
-    // return this.http.get<Student[]>(this.mockUrl, headerOption);
+  getAllstudent():Observable<Student[]> {
+    debugger
+   return this.http.get<Student[]>("http://localhost:3000/Student"); 
+   
 }
 
 
+
 }
-
-
-
-//createstudent(student: Student): Observable<Student0> {
- // return this.http.post<Student>(this.mockUrl, student, headerOption);
-//}

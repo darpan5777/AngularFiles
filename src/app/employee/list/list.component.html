@@ -1,1 +1,21 @@
-<p>list works!</p>
+<h1>Student List display HERE</h1>
+<table class="table table-hover">
+    <tr *ngFor ="let Student of  allstudent">
+        <td>{{Student.studentName}}</td>
+        <td>{{Student.studentadd}}</td>
+        <td>{{Student.city}}</td>
+        <td>{{Student.state}}</td>
+        <td></td>
+    </tr>
+    
+       <a class="btn" >
+         <i class="fa fa-edit"></i>
+       </a>
+    
+     <td>
+       <a class="btn text-danger" >
+         <i class="fa fa-trash"></i>
+       </a>
+     </td>
+   
+ </table>
