@@ -14,6 +14,10 @@ const routes: Routes = [
     component: AddComponent
   },
   {
+    path: 'edit/:id',
+    component: AddComponent
+  },
+  {
     path: 'list',
     component: ListComponent
   },

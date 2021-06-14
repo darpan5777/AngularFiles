@@ -1,11 +1,8 @@
 export class Student {
-         id:string="";
-         studentName:string="";
-         studentadd:string="";
-           city:string="";
-            state:string="";
-           
-            
-
+  id: string = "";
+  name: string = "";
+  add: string = "";
+  city: string = "";
+  state: string = "";
 }
 
