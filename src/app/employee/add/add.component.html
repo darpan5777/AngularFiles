@@ -1,20 +1,18 @@
 
 
-
+<form></form>
 <div class="emp-form">
    <div class="row">
-
-
-<div class="col-md-12 form-group">
+<div class="col-md-6 form-group">
     <label for="name">STUDENTNAME</label>
-     <input placeholder="name" class="form-control" name="name" [(ngModel)]="currentstudent.name">
+     <input placeholder="name" class="form-control" name="name" #name="ngModel" [(ngModel)]="currentstudent.name">
     </div>
-     <div class="col-md-12 form-group">
+     <div class="col-md-6 form-group">
         <label for="add">STUDENTADD</label>
         <input placeholder="add" class="form-control" name="add" [(ngModel)]="currentstudent.add">
      </div>
      <div class="col-md-6 form-group">
-        <label for="city">CITY</label>
+      <label for="add">city</label>
         <input placeholder="city" class="form-control" name="city" [(ngModel)]="currentstudent.city">
      </div>
      <div class="col-md-6 form-group"> 
@@ -22,11 +20,8 @@
         <input placeholder="state" class="form-control" name="state" [(ngModel)]="currentstudent.state">
      </div>
      <div class="row">
-         <div class="col-md-8">
+         <div class="col-md-6">
         <button type="button" class="btn btn-success" (click)="createstudent(currentstudent)"><S>SUBMIT</S></button>
         <div>
-
       </div>
-        
-  
-   
+       </div>

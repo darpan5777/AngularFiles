@@ -4,5 +4,6 @@ export class Student {
   add: string = "";
   city: string = "";
   state: string = "";
+  constructor(){}
 }
 

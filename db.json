@@ -1,20 +1,6 @@
 {
   "Student": [
     {
-      "id": 3,
-      "name": "deepa",
-      "add": "tithal road",
-      "city": "mumbai",
-      "state": "gujrat"
-    },
-    {
-      "id": 4,
-      "name": "RAVI PARMAR",
-      "add": "TITHAL ROAD",
-      "city": "valsad",
-      "state": "GUJART"
-    },
-    {
       "id": 6,
       "name": "SATISH PARMAR",
       "add": "TITHAL ROAD",
@@ -32,7 +18,7 @@
       "state": "maharastra"
     },
     {
-      "id": 9
+      "id": 12
     }
   ]
 }

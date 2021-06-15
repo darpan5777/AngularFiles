@@ -14,7 +14,7 @@ export class AddComponent implements OnInit {
   public currentstudent: Student | any;
   // currentstudent: any = {
   //   id: '',
-  //   name: '',
+  
   //   add: '',
   //   city: '',
   //   state: '',  
