@@ -8,9 +8,9 @@ const headerOption = {
 };
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'}
+  
+)
 export class StudentService {
   allstudent: Student[] = [];
 

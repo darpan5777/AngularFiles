@@ -1,14 +1,16 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <div class="form-row">
+      <div class="container">
+        <h2>Student Deatails</h2>
         <div class="col-md-4 mb-3">
           <label for="Name">Student Name</label>
-          <input type="text" class="form-control" id="Name" formControlName="Name"  value="Name" required>
+          <input type="text" class="form-control" id="Name" formControlName="Name"   required>
           <div class="valid-feedback">
          </div>
         </div>
         <div class="col-md-4 mb-3">
           <label for="Rollnumber">Rollnumber</label>
-          <input type="text" class="form-control" id="Rollnumber" formControlName="Rollnumber"  value="Rollnumber" required>
+          <input type="text" class="form-control" id="Rollnumber" formControlName="Rollnumber"   required>
           <div class="valid-feedback">
             </div>
         </div>
@@ -39,10 +41,10 @@
                 <h2>skill</h2>
                 <button class="btn btn-primary" (click)="addskill()">+ Add another skill</button>
             
-                <div *ngFor="let skill of skill.controls; let  i=index" [formControlName]="i">
+                <div *ngFor="let skill of skill.controls; let  i=index" >
                 
-                  <label for="skill-{{ i }}">skill:</label>
-                  <input id="skill-{{ i }}" type="text">
+                  <label for="skill-{{ i + 1 }}">skill:</label>
+                  <input id="skill-{{ i }}" type="text"  [formControlName]="i" >
                 </div>
               </div>
      <p>fill The Form for submmit Form</p>

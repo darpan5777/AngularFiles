@@ -8,10 +8,14 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./reactiveform.component.scss']
 })
 export class ReactiveformComponent implements OnInit {
+ 
+ 
   profileForm = this.Formbuldier.group({
     Name: ['', Validators.required],
     Rollnumber: [''],
-    address: this.Formbuldier.group({}),
+    address: this.Formbuldier.group([{city:['', Validators.required]
+                                     ,street:['', Validators.required]
+                                        ,state:['', Validators.required]}]),
     skill: this.Formbuldier.array([
       this.Formbuldier.control('')
     ])
