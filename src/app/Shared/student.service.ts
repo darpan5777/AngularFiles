@@ -8,13 +8,13 @@ const headerOption = {
 };
 
 
-@Injectable({providedIn: 'root'}
+@Injectable(
   
 )
 export class StudentService {
   allstudent: Student[] = [];
 
-  mockUrl: string = 'http://localhost:3000/Student';
+  mockUrl: string = ' http://localhost:3000/Student';
 
 
 
@@ -24,14 +24,15 @@ export class StudentService {
 
 
   ) { }
+  
   getAllstudent(): Observable<Student[]> {
     console.log(Student)
-    return this.http.get<Student[]>("http://localhost:3000/Student");
+    return this.http.get<Student[]>(" http://localhost:3000/Student");
 
   }
 
   createstudent(student: Student): Observable<Student> {
-    return this.http.post<Student>(this.mockUrl, student, headerOption);
+    return this.http.post<Student>(this.mockUrl, student);
   }
 
   updatestudent(student: Student): Observable<Student> {

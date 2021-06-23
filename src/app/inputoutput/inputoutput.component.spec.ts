@@ -1,21 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmployeeComponent } from './employee.component';
-import { EmployeeRoutingModule } from './employee-routing.module';
+import { InputoutputComponent } from './inputoutput.component';
 
-describe('EmployeeComponent', () => {
-  let component: EmployeeComponent;
-  let fixture: ComponentFixture<EmployeeComponent>;
+describe('InputoutputComponent', () => {
+  let component: InputoutputComponent;
+  let fixture: ComponentFixture<InputoutputComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EmployeeComponent ]
+      declarations: [ InputoutputComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EmployeeComponent);
+    fixture = TestBed.createComponent(InputoutputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,25 +1,8 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "Student": [
     {
       "id": 6,
-      "name": "SATISH PARMAR1",
+      "name": "SATISH PARMAR",
       "add": "TITHAL ROAD",
       "city": "valsad",
       "state": "GUJART"
@@ -51,6 +34,9 @@
       "add": "tithal road",
       "city": "mumbai",
       "state": "maharastra"
+    },
+    {
+      "id": 10
     }
   ]
 }

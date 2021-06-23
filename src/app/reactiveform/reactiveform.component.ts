@@ -12,7 +12,7 @@ export class ReactiveformComponent implements OnInit {
  
   profileForm = this.Formbuldier.group({
     Name: ['', Validators.required],
-    Rollnumber: [''],
+    Rollnumber: ['',Validators.required],
     address: this.Formbuldier.group([{city:['', Validators.required]
                                      ,street:['', Validators.required]
                                         ,state:['', Validators.required]}]),
@@ -37,7 +37,12 @@ export class ReactiveformComponent implements OnInit {
   addskill() {
     this.skill.push(this.Formbuldier.control(''));
   }
+ 
+   control(){
+     return this.profileForm.controls
+   }
 
+  
   onSubmit() {
     console.log(this.profileForm.value);
   }

@@ -1,0 +1,81 @@
+<h1>1Rivet</h1>
+
+<table> <ul *ngFor="let list of employee" [ngSwitch]="list.currency"> 
+  <tr  *ngSwitchCase="'INDIA'">
+           Id: <td><u>{{list.id}}</u></td>
+    FirstName: <td><u>{{list.firstName}}</u></td>
+    LirstName: <td><u>{{list.lastName}}</u></td>
+      Country: <td><u>{{list. country}}</u></td>
+     Currency: <td><u>{{list.currency}}</u></td>
+  </tr>
+    <li *ngSwitchCase="'USA'">{{list.currency}}</li>
+    <li *ngSwitchDefault>{{list.currency}}</li>
+  </ul>
+</table> 
+  
+
+<table> <h2>Pipes</h2>
+<li> {{Price | currency}}</li> 
+
+
+  <li>{{Price | currency : 'INR'}}</li>
+
+
+ <li> {{Price | currency :'USD':false}}</li>
+
+
+
+  
+
+  <li>{{Dateofformat | date}}</li>
+  
+
+  <li>{{ Dateofformat | date:'medium' }}</li>
+  
+
+  <li>{{ Dateofformat | date:'fullDate' }}</li>
+
+
+  <li>{{ Dateofformat | date:'yy' }}</li>
+  
+
+  <li>{{ Dateofformat | date:'Hm' }}</li>
+  
+
+ <li> {{ Dateofformat | date:'MM' }}</li>
+  
+  
+  <li>{{ Dateofformat | date:'dd-MM-yyyy' }}</li>
+  
+
+
+  
+  
+  <li>{{ Name | number :'5.5'}}</li> 
+  
+
+  
+  <li>{{Name |uppercase}}</li>
+  
+
+
+
+  
+ <li>{{Name | lowercase }}</li> 
+  
+
+
+ <li> {{value1 | percent}}</li>
+
+
+
+ <li> {{value1 | percent :'3.2'}}</li>
+ <div>{{Title | slice:3:5}}</div>
+</table>
+
+
+
+
+
+<li> {{ employee| json}}</li>
+  

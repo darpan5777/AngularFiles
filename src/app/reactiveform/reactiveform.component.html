@@ -1,52 +1,58 @@
+<div class="container">
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <div class="form-row">
-      <div class="container">
+      <div class="form-group">
         <h2>Student Deatails</h2>
         <div class="col-md-4 mb-3">
           <label for="Name">Student Name</label>
-          <input type="text" class="form-control" id="Name" formControlName="Name"   required>
-          <div class="valid-feedback">
+          <input type="text" class="form-control" id="Name" formControlName="Name"  required>
+ 
          </div>
         </div>
+        <div class="form-group">
         <div class="col-md-4 mb-3">
           <label for="Rollnumber">Rollnumber</label>
           <input type="text" class="form-control" id="Rollnumber" formControlName="Rollnumber"   required>
           <div class="valid-feedback">
             </div>
         </div>
+     
+     
+        <div class="form-group">
         <div formGroupName="address">
       <h2>Address</h2>
-      <div class="form-row">
-        <div class="col-md-4 mb-3">
+       <div class="col-md-4 mb-3">
+          <div class="form-group">
           <label for="city">City</label>
           <input type="text" class="form-control" id="city" formControlName="city" placeholder="City" required>
-          <div class="invalid-feedback">
+        
           </div>
         </div>
-        <div class="form-row">
-            <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3">
+              <div class="form-group">
               <label for="street">street</label>
               <input type="text" class="form-control" id="street" formControlName="street" placeholder="street" required>
-              <div class="invalid-feedback">
-              </div>
+               </div>
             </div>
-        <div class="form-row">
-                <div class="col-md-4 mb-3">
+             <div class="col-md-4 mb-3">
+                  <div class="form-group">
                   <label for="State">State</label>
                   <input type="text" class="form-control" id="State" formControlName="State" placeholder="State" required>
-                  <div class="invalid-feedback">
+                  
                   </div>
              </div>
+           
+           
+           
+           
              <div formArrayName="skill">
                 <h2>skill</h2>
                 <button class="btn btn-primary" (click)="addskill()">+ Add another skill</button>
-            
-                <div *ngFor="let skill of skill.controls; let  i=index" >
-                
+                 <div *ngFor="let skill of skill.controls; let  i=index" >
                   <label for="skill-{{ i + 1 }}">skill:</label>
                   <input id="skill-{{ i }}" type="text"  [formControlName]="i" >
                 </div>
-              </div>
+              </div></div>
      <p>fill The Form for submmit Form</p>
     <button type="submit" class="btn btn-primary"[disabled]="!profileForm.valid">Submit</button>
 <router-outlet></router-outlet>

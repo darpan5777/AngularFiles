@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h1 class="page-title">Student Registration</h1>
+        <form #registerForm="ngForm" novalidate>
+          <div class="form-group"  [ngClass]="{
+            'has-danger': studentName.invalid && (studentName.dirty || studentName.touched),
+            'has-success': studentName.valid && (studentName.dirty || studentName.touched)
+       }">
+            <label for="StudentName">StudentName</label>
+            <input type="text"
+            [(ngModel)]="FormData.name"  class="form-control"
+            name="studentName"required
+            #studentName="ngModel"  />
+          </div>
+         <div *ngIf="studentName.invalid && (studentName.dirty || studentName.touched)"
+          class="alert alert-danger">
+           <div *ngIf="studentName.errors'.'required">
+            studentName is required
+          </div>
+        </div>
+          <div class="form-group" [ngClass]="{
+            'has-danger': email.invalid && (email.dirty || email.touched),
+            'has-success': email.valid && (email.dirty || email.touched)
+       }">
+            <label for="email">Email</label>
+            <input type="email"
+            [(ngModel)]="FormData.email"   class="form-control"
+            name="email"
+            #email="ngModel"
+            pattern="[^ @]*@[^ @]*"
+                   required />
+          </div> <div *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="alert alert-danger">
+           <div *ngIf="email.errors'.'required">
+            <p *ngIf="email.errors.pattern">Email must contain at least the @ character</p>
+            Email is required
+          </div>
+        </div>
+
+          <div class="form-group"  [ngClass]="{
+            'has-danger': password.invalid && (password.dirty || password.touched),
+            'has-success': password.valid && (password.dirty || password.touched)
+      }">
+            <label for="password">Password</label>
+            <input type="password"
+            [(ngModel)]="FormData.password"     class="form-control"
+            name="password"
+            #password="ngModel"   minlength="8"
+                   required />
+          </div> <div *ngIf="password.invalid && (password.dirty || password.touched)"
+          class="alert alert-danger">
+          <p *ngIf="password.errors'.'minlength">Password must be at least 8 characters long</p>
+           <div *ngIf="password.errors'.'required">
+            password is required
+          </div>
+        </div>
+
+          <div class="form-group">
+            <label for="passwordConfirmation">Confirm Password</label>
+            <input type="password"
+            [(ngModel)]="FormData.confirmpassword"  class="form-control"
+            name="confirmpassword"
+            #confirmpassword="ngModel"
+                   required />
+          </div>
+          <div *ngIf="confirmpassword.invalid && (confirmpassword.dirty || confirmpassword.touched)"
+          class="alert alert-danger">
+          <div *ngIf="confirmpassword.errors'.'required">
+            Confirm Password is required
+          </div>
+        </div>
+        <button 
+        type="submit" 
+        class="btn btn-warning"
+        [disabled] = "!registerForm.form.valid"
+        (click)="register()">
+                  Register
+    </button>
+        </form>
+        {{  register() | json}}
+      </div>
+    </div>
+
+
+
+</div> 

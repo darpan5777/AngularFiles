@@ -1,0 +1,13 @@
+<h2>Fruits Name</h2>
+
+<td>
+  <ul *ngFor= "let fruit of fruits">
+  <li>{{fruit}}</li>
+</ul>
+ 
+ 
+<button type="button" class="btn btn-success" (click)="increment()">+</button>
+
+  <input type="text"  [value]="quantity">
+
+  <button type="button" class="btn btn-success"   (click)="decrement()">-</button>

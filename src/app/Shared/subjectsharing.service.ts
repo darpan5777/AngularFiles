@@ -12,6 +12,6 @@ export class SubjectsharingService {
   exclusive = new Subject<string>();
 
 
-  UserName = new BehaviorSubject<string>('Darpan');
+  UserName = new BehaviorSubject<string>('');
   constructor() { }
 }

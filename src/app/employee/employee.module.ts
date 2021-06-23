@@ -5,6 +5,7 @@ import { EmployeeRoutingModule } from './employee-routing.module';
 import { EmployeeComponent } from './employee.component';
 import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
+import { StudentService } from '../Shared/student.service';
 
 
 @NgModule({
@@ -14,9 +15,10 @@ import { ListComponent } from './list/list.component';
     ListComponent,
     
   ],
+  providers:[StudentService],
   imports: [
-    CommonModule,
-    EmployeeRoutingModule,FormsModule
+    CommonModule
+,EmployeeRoutingModule ,FormsModule
   ]
 })
 export class EmployeeModule { }
