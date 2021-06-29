@@ -1,0 +1,17 @@
+<div class="form-group">
+    <label for="exampleFormControlSelect1">Select Name</label>
+    <select class="form-control" id="exampleFormControlSelect1" (change)="onChangeName($event)">
+      <option *ngFor="let item of name" [value]="item">{{item}}</option>
+    </select>
+    <label for="exampleFormControlSelect2">Select Team</label>
+    <select class="form-control" id="exampleFormControlSelect2" (change)="onChangeColor($event)">
+      <option *ngFor="let item of team" [value]="item">{{item}}</option>
+    </select>
+  </div>
+ 
+  <h2>Result</h2>
+<ng-container *ngFor="let item of selectedTeam">
+  <p> Select playersname is <b>{{item.name}} </b>and Team is <b>{{item.team}}</b></p>
+</ng-container>
+
+

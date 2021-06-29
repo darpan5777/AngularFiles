@@ -1,0 +1,20 @@
+<p>switch-map works!</p>
+<p>switch-map</p>
+<h1 style="font-size: 100px; text-align: center;">{{counter}}</h1>
+<label for=""> Search</label>
+<input type="text" [formControl]="search" >
+<div style="display: flex;">
+  <div>
+    <h2>ListofMembers</h2>
+    <div *ngFor="let item of ListofMembers">
+      <p>{{item}}</p>
+    </div>
+  </div>
+  <div style="margin-left: 20px;">
+    <h2>listresult</h2>
+    <div *ngFor="let item of listresult">
+      <p>{{item}}</p>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

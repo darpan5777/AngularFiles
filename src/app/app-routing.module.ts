@@ -14,7 +14,13 @@ const routes: Routes = [
 
   { path: 'inputoutput', loadChildren: () => import('./inputoutput/inputoutput.module').then(m => m.InputoutputModule) },
 
-  { path: 'Tamplate-driven', loadChildren: () => import('./tamplate-driven/tamplate-driven.module').then(m => m.TamplateDrivenModule) }
+  { path: 'Tamplate-driven', loadChildren: () => import('./tamplate-driven/tamplate-driven.module').then(m => m.TamplateDrivenModule) },
+
+  { path: 'RxjsOpraters', loadChildren: () => import('./rxjs-opraters/rxjs-opraters.module').then(m => m.RxjsOpratersModule) },
+
+  { path: 'Mvpstudent', loadChildren: () => import('./mvpstudent/mvpstudent.module').then(m => m.MVPstudentModule) },
+
+
 ];
 
 @NgModule({
