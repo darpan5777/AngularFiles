@@ -1,0 +1,29 @@
+{
+  "emp":
+  [{ "id": 1,
+    "empname": "darpan",
+    "empsalary": "20000",
+    "empgretersalary": "true"
+
+  },
+  { "id": 2,
+    "empname": "sandeep",
+    "empsalary": "15000",
+    "empgretersalary": "true"
+  },
+  { "id": 3,
+    "empname": "ankita",
+    "empsalary": "12000",
+    "empgretersalary": "true"
+  },
+  { "id": 4,
+    "empname": "pooja",
+    "empsalary": "10000",
+    "empgretersalary": "true"
+  },
+  { "id": 5,
+    "empname": "",
+    "empsalary": "10000",
+    "empgretersalary": "true"
+  }]
+}

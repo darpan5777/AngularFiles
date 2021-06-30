@@ -1,0 +1,25 @@
+
+
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+    
+      <th scope="col">EmployeeName</th>
+      <th scope="col">Employeesalary</th>
+      <th scope="col">Employeegretersalry</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let empListItem of empList">
+      <td>{{empListItem.empname}}</td>
+      <td>{{empListItem.empsalary}}</td>
+      <td>{{empListItem.empgretersalary}}</td>
+      <td class="text-center">
+    <tr>
+      <button type="button" class="btn btn-danger">Delete</button>
+       </tbody>
+</table>
+
+     
