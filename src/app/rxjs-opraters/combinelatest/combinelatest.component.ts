@@ -23,19 +23,19 @@ export class CombinelatestComponent implements OnInit {
   public selectedTeam:any[] =[];
   ngOnInit(): void {
     combineLatest(this.mapserviceservice.playersname,this.mapserviceservice.palyersteam).subscribe(([res1,res2])=>{
-      debugger
+   
       this.selectedTeam.push({name:res1,team:res2})
       
     })
   }
 
 	onChangeName(event:any){
-		debugger
+
 		this.mapserviceservice.playersname.next(event.target.value);
 	}
 
 	onChangeColor(event:any){
-		debugger
+
 		this.mapserviceservice.palyersteam.next(event.target.value);
 
 	}
