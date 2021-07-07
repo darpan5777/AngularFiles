@@ -22,6 +22,8 @@ const routes: Routes = [
 
   { path: 'EmpDetails', loadChildren: () => import('./emp-details/emp-details.module').then(m => m.EmpDetailsModule) },
 
+  { path: 'BankAccount', loadChildren: () => import('./bank-account/bank-account.module').then(m => m.BankAccountModule) },
+
 
 ];
 

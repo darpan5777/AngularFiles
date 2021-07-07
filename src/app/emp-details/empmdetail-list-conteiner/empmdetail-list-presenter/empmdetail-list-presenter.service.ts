@@ -8,19 +8,20 @@ import { EmployeeService } from '../../employee.service';
 export class EmpmdetailListPresenterService {
  
 
-  public empId:Subject<any> = new Subject();
+  public accountId$:Observable<any>
+  public accountId: Subject<any> = new Subject();
 
-  constructor( private employeeservice:EmployeeService) { }
+  
+  constructor( private employeeservice:EmployeeService) {
+    this.accountId$ = this.accountId.asObservable();
+   }
 
 
-   
-  salary(salary: any): void {
-    if ( salary === 10000 ) {
-      this.empId.next(this.employeeservice.allemployee);
-    } else {
-      this.empId.next(this.employeeservice.allemployee);
-    }
+  public  deleteaccount(Id: number) {
+    debugger
+    console.log('delete Id', Id);
+    // this.accountId$.next(Id);
   }
-
+  
   }
 

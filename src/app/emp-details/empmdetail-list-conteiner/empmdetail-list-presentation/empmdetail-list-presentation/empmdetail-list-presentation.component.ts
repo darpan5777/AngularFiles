@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Input, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Employee } from 'src/app/emp-details/employee.model';
 import { EmpmdetailListPresenterService } from '../../empmdetail-list-presenter/empmdetail-list-presenter.service';
@@ -11,22 +12,33 @@ import { EmpmdetailListPresenterService } from '../../empmdetail-list-presenter/
   changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class EmpmdetailListPresentationComponent implements OnInit {
-  private _employeeList:Employee[]= []
+  private _accountdetails:Employee[]= []
+  
 
-  @Input() public set empList(value: Employee[]) {
+  @Input() public set accountdetails(value: Employee[]) {
     if (value) {
       debugger
-      this._employeeList = value
+      this._accountdetails = value
     }
   }
-  public get empList(): Employee[] {
-    return this._employeeList
+  public get accountdetails(): Employee[] {
+    return this._accountdetails
   }
 
   
-  constructor() { }
+  @Output() public deleteId:EventEmitter<any> = new EventEmitter();
+  constructor(
+   private empdetillistpresenterservice:EmpmdetailListPresenterService
+  ) { }
 
   ngOnInit(): void {
+    this.empdetillistpresenterservice.accountId$.subscribe((accountId) => {
+      debugger
+      this.deleteId.emit(accountId);
+    });
   }
-
+  public deleteaccount(Id: number) {
+    debugger
+    this.empdetillistpresenterservice.deleteaccount(Id)
+  }
 }

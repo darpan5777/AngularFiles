@@ -28,8 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
+ 
    
   ],
   providers: [StudentService,SubjectsharingService],

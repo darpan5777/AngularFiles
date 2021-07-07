@@ -1,43 +1,4 @@
 {
-  "emp":
-  [{ "id": 1,
-    "empname": "darpan",
-    "empsalary": "20000",
-    "empgretersalary": "true"
-
-  },
-  { "id": 2,
-    "empname": "komal",
-    "empsalary": "10000",
-    "empgretersalary": "true"
-
-  },
-  { "id": 1,
-    "empname": "darpan",
-    "empsalary": "20000",
-    "empgretersalary": "true"
-
-  },
-  { "id": 2,
-    "empname": "sandeep",
-    "empsalary": "15000",
-    "empgretersalary": "true"
-  },
-  { "id": 3,
-    "empname": "ankita",
-    "empsalary": "12000",
-    "empgretersalary": "true"
-  },
-  { "id": 4,
-    "empname": "pooja",
-    "empsalary": "10000",
-    "empgretersalary": "true"
-  },
-  { "id": 5,
-    "empname": "pawan",
-    "empsalary": "10000",
-    "empgretersalary": "true"
-  }],
   "posts": [
     {
       "id": 1,
@@ -45,87 +6,59 @@
       "author": "typicode"
     }
   ],
-  "comments": [
+  "Bankaccount": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "AccountNo": "123456789879",
+      "Name": "darpan parmar",
+      "Email": "darpan6777@gmail.com",
+      "PhoneNo": "9687177725",
+      "BankName": "icicibank",
+      "Gender": "male",
+      "Address": "valsad",
+      "Amount": "700000"
+    },
+    {
+      "AccountNo": "123456789879",
+      "Name": "darpan parmar",
+      "Email": "darpan6777@gmail.com",
+      "PhoneNo": "9687177725",
+      "BankName": "icicibank",
+      "Gender": "male",
+      "Address": "valsad",
+      "Amount": "700000"
+    },
+    {
+      "AccountNo": "123456789879",
+      "Name": "darpan parmar",
+      "Email": "darpan6777@gmail.com",
+      "PhoneNo": "9687177725",
+      "BankName": "icicibank",
+      "Gender": "male",
+      "Address": "valsad",
+      "Amount": "700000"
+    },
+    {
+      "AccountNo": "123456789879",
+      "Name": "darpan parmar",
+      "Email": "darpan6777@gmail.com",
+      "PhoneNo": "9687177725",
+      "BankName": "icicibank",
+      "Gender": "male",
+      "Address": "valsad",
+      "Amount": "700000"
+    },
+    {
+      "AccountNo": "123456789879",
+      "Name": "darpan parmar",
+      "Email": "darpan6777@gmail.com",
+      "PhoneNo": "9687177725",
+      "BankName": "icicibank",
+      "Gender": "male",
+      "Address": "valsad",
+      "Amount": "700000"
     }
   ],
   "profile": {
     "name": "typicode"
-  },
-  "Student": [
-    {
-      "id": 6,
-      "name": "SATISH PARMAR1234567",
-      "add": "TITHAL ROAD",
-      "city": "valsad",
-      "state": "GUJART"
-    },
-    {
-      "id": 7,
-      "name": "darpan parmar",
-      "add": "dfs",
-      "city": "sdfsf",
-      "state": "GUJRAT"
-    },{
-      "Student": [
-        {
-          "id": 6,
-          "name": "SATISH PARMAR",
-          "add": "TITHAL ROAD",
-          "city": "valsad",
-          "state": "GUJART"
-        },
-        {
-          "id": 7,
-          "name": "darpan parmar",
-          "add": "dfs",
-          "city": "sdfsf",
-          "state": "GUJRAT"
-        },
-        {
-          "id": 8,
-          "name": "Ranveer",
-          "add": "tithal road",
-          "city": "mumbai",
-          "state": "maharastra"
-        },
-        {
-          "id": 9,
-          "name": "kiran ",
-          "add": "gandhi",
-          "city": "billimore",
-          "state": "GUJRAT"
-        },
-        {
-          "id": 9,
-          "name": "Ranveer",
-          "add": "tithal road",
-          "city": "mumbai",
-          "state": "maharastra"
-        },
-        {
-          "id": 10
-        }
-      ],
-
-      "emp":
-      [{ "id": 1,
-        "empname": "darpan",
-        "empsalary": "20000",
-        "empgretersalary": "true"
-    
-      },
-      { "id": 2,
-        "empname": "komal",
-        "empsalary": "10000",
-        "empgretersalary": "true"
-    
-      }]
-     
-    }
-  ]
-  
+  }
 }

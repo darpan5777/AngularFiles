@@ -1,9 +1,15 @@
 export class Employee {
 
-public empid!: number;
-public empname!: string;
-public empsalary!: string;
-public empgretersalary!:boolean;
+public id!:number;
+public   AccountNo!:number;
+public   Name!:String;
+public    Email!:string;
+public   PhoneNo!:number;
+public   BankName!:string;
+public   Gender!:string;
+public   Address!:string;
+public  Amount!:string;      
+
 constructor(){}
 }
   

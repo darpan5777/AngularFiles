@@ -1,0 +1,98 @@
+<div class="container-fluid">
+    <div class="col align-items-start">
+      <div class="col">
+        <h1> <span class="text-success">New-Account-Form</span></h1>
+      </div>
+<form [formGroup]="AccountForm" >
+    <div class="form-group" >
+        <label for="name">AccountNo :</label>
+        <input 
+            formControlName="AccountNo"
+            id="AccountNo" 
+            type="text" 
+            class="form-control" >
+        <!-- <div *ngIf="AccountForControl.AccountNo.touched && AccountForControl.AccountNo.invalid" class="alert alert-danger"> -->
+    <div *ngIf="AccountFormControl.AccountNo.invalid && AccountFormControl.AccountNo.touched" class="alert alert-danger">
+            
+            <div *ngIf="AccountFormControl.AccountNo.errors?.required">AccountNo is required.</div> 
+            <div *ngIf="AccountFormControl.AccountNo.errors?.minlength">AccountNo should be 15 digit.</div>
+    </div>
+    </div>
+    <div class="form-group">
+        <label for="Name">Account Holder Name :</label>
+        <input 
+            formControlName="Name"
+            id=" Name" 
+            type="text" 
+            class="form-control">
+        <!-- <div *ngIf="AccountForControl.name.touched && AccountForControl.name.invalid" class="alert alert-danger"> -->
+            <div *ngIf="AccountFormControl.Name.invalid && AccountFormControl.Name.touched" class="alert alert-danger"> <div *ngIf="AccountFormControl.name.errors?.required">Name is required.</div> 
+             <div *ngIf="AccountFormControl.name.errors?.minlength">Name should be 15 character.</div> 
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email :</label>
+        <input 
+            formControlName="Email"
+            id="Email" 
+            type="text" 
+            class="form-control">
+        <!-- <div *ngIf="AccountForControl.Email.touched && AccountForControl.email.invalid" class="alert alert-danger"> -->
+            <div *ngIf="AccountFormControl.Email.invalid && AccountFormControl.Email.touched" class="alert alert-danger">
+             <div *ngIf="AccountFormControl.Email.errors?.required">Email is required.</div> 
+             <div *ngIf="AccountFormControl.Email.errors?.Email">Please, enter valid email address.</div> 
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <label for="PhoneNo">PhoneNo :</label>
+        <input 
+            formControlName="PhoneNo"
+            id="PhoneNo" 
+            type="text" 
+            class="form-control">
+        <!-- <div *ngIf="AccountFormControl.PhoneNo.touched && AccountFormControl.PhoneNo.invalid" class="alert alert-danger"> -->
+            <div *ngIf="AccountFormControl.PhoneNo.invalid && AccountFormControl.PhoneNo.touched" class="alert alert-danger">
+            <div *ngIf="AccountFormControl.PhoneNo.errors?.required">phone No is required.</div> 
+             <div *ngIf="AccountFormControl.PhoneNo.errors?.Email">Please, enter valid PhoneNo address.</div> 
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1"> Select Bank :</label>
+        <select formControlName="BankName" class="form-control">
+            <option >BOB</option>
+            <option >ICICI</option>
+            <option >HDFC</option>
+            <option >SBI</option>
+            <option ></option>
+        </select>
+        <div *ngIf="AccountFormControl.BankName.invalid && AccountFormControl.BankName.touched" class="alert alert-danger">
+     <div *ngIf="AccountFormControl.BankName.errors?.required">BankName is required.</div>
+   
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="radio" value="Male" formControlName="gender">
+              <span>Male</span>
+          </label>
+          <label>
+            <input type="radio" value="Female" formControlName="gender">
+              <span>Female</span>
+          </label>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Currancy :</label>
+        <select formControlName="Currancy " class="form-control">
+            <option >USD</option>
+            <option >INR</option>
+            <option >EURO</option>
+            <option >CAD</option>
+        </select>
+     <div *ngIf="AccountFormControl.Currancy .errors?.required"> is required.</div>
+   
+    </div>
+
+    <button class="btn btn-primary" type="submit" (ngSubmit)="onSubmit()">Submit</button>
+    <button class="my-1 btn btn-secondary mx-3" routerLink="/EmpDetails">Back AccountList</button>
+    </div>    
+</form>

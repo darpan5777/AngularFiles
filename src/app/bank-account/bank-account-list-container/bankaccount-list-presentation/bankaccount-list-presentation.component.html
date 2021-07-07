@@ -1,0 +1,47 @@
+
+<div class="container-fluid">
+    <div class="col align-items-start">
+      <div class="col">
+        <h1> <span class="text-success">Account Details</span></h1>
+      </div>
+      <!-- add accountform button -->
+      <button class="my-1 btn btn-primary" routerLink="Add">Add</button>
+  
+    </div>
+    <!-- search  -->
+    <div class="form-group row">
+      <label for="search" class="col-sm-2 col-form-label" style="text-align: right">Search</label>
+        <div class="col-sm-3">
+         <input type="text" [(ngModel)]="searchvalue" class="form-control" id="search">
+  <table class="table">
+    <thead class="thead-dark">
+      
+      <!-- list data -->
+      <tr>
+      
+        <th scope="col">AccountNo</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">PhoneNo</th>
+        <th scope="col">BankName</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+     <tbody>                                      
+       <!--                                                        search pipe -->
+        <tr *ngFor="let bankaccount of BankDetails | searchfilter:searchvalue">
+        <td>{{bankaccount.AccountNo}}</td>
+        <td>{{bankaccount.Name}}</td>
+        <td>{{bankaccount.Email}}</td>
+        <td>{{bankaccount.PhoneNo}}</td> 
+        <td>{{bankaccount.BankName}}</td>
+        <td>{{bankaccount.Gender}}</td>
+        <td>{{bankaccount.Address}}</td>
+        <td>{{bankaccount.Amount}}</td>
+        <td class="text-center">
+      <tr>
+        <button type="button" class="btn btn-danger"  title="Delete" (click)="deleteaccount(bankaccount.id)">Delete</button> 
+         </tbody>
+  </table>

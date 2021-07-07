@@ -1,24 +1,41 @@
 
 
+<div class="container-fluid">
+  <div class="col align-items-start">
+    <div class="col">
+      <h1> <span class="text-success">Account Details</span></h1>
+    </div>
+    <button class="my-1 btn btn-primary" routerLink="add">Add</button>
 
+  </div>
 <table class="table">
   <thead class="thead-light">
+    
     <tr>
     
-      <th scope="col">EmployeeName</th>
-      <th scope="col">Employeesalary</th>
-      <th scope="col">Employeegretersalry</th>
-      <th scope="col"></th>
+      <th scope="col">AccountNo</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">PhoneNo</th>
+      <th scope="col">BankName</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Address</th>
+      <th scope="col">Amount</th>
     </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let empListItem of empList">
-      <td>{{empListItem.empname}}</td>
-      <td>{{empListItem.empsalary}}</td>
-      <td>{{empListItem.empgretersalary}}</td>
+      <tr *ngFor="let bankaccount of accountdetails">
+      <td>{{bankaccount.AccountNo}}</td>
+      <td>{{bankaccount.Name}}</td>
+      <td>{{bankaccount.Email}}</td>
+      <td>{{bankaccount.PhoneNo}}</td> 
+      <td>{{bankaccount.BankName}}</td>
+      <td>{{bankaccount.Gender}}</td>
+      <td>{{bankaccount.Address}}</td>
+      <td>{{bankaccount.Amount}}</td>
       <td class="text-center">
     <tr>
-      <button type="button" class="btn btn-danger">Delete</button>
+      <button type="button" class="btn btn-danger"  title="Delete" (click)="deleteaccount(bankaccount.id)">Delete</button>
        </tbody>
 </table>
 

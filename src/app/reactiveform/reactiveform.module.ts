@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveformRoutingModule } from './reactiveform-routing.module';
 import { ReactiveformComponent } from './reactiveform.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SwitchMapComponent } from './switch-map/switch-map.component';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { SwitchMapComponent } from './switch-map/switch-map.component';
   imports: [
     CommonModule,
     ReactiveformRoutingModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,FormsModule
   ]
 })
 export class ReactiveformModule { }

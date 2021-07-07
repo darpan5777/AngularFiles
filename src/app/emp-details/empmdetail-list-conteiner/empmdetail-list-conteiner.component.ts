@@ -14,16 +14,16 @@ import { EmployeeService } from '../employee.service';
 export class EmpmdetailListConteinerComponent implements OnInit {
 
 
-  public employeeList$: Observable<any> = of();
+  public AccountList$: Observable<any> = of();
 
   constructor(
     private employeeservice:EmployeeService
 
   ) {
-    this.employeeList$ = this.employeeservice.getAllemployee();
+    this.AccountList$ = this.employeeservice.getAllemployee();
    }
 
   ngOnInit(): void {
   }
-
+  
 }
