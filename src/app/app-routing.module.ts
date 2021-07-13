@@ -24,6 +24,11 @@ const routes: Routes = [
 
   { path: 'BankAccount', loadChildren: () => import('./bank-account/bank-account.module').then(m => m.BankAccountModule) },
 
+  { path: 'TemplateOutlet', loadChildren: () => import('./template-outlet/template-outlet.module').then(m => m.TemplateOutletModule) },
+
+
+  { path: 'Outletcontext', loadChildren: () => import('./outletcontext/outletcontext.module').then(m => m.OutletcontextModule) },
+
 
 ];
 
