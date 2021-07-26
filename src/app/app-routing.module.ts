@@ -29,6 +29,8 @@ const routes: Routes = [
 
   { path: 'Outletcontext', loadChildren: () => import('./outletcontext/outletcontext.module').then(m => m.OutletcontextModule) },
 
+  { path: 'cdkangular', loadChildren: () => import('./cdkangular/cdkangular.module').then(m => m.CdkangularModule) },
+
 
 ];
 
