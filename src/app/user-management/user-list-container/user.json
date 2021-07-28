@@ -1,0 +1,26 @@
+{
+  "User": [
+    {
+      "FirstName": "Darpan",
+      "LastName": "Parmar",
+      "Email": "darpan6777@gmail.com",
+      "ContactNo": "9687177725",
+      "Office": "Mumbai",
+      "ClientName": "Apple"
+   
+    }],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}

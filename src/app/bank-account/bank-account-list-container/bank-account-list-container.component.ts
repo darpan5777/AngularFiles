@@ -13,7 +13,7 @@ export class BankAccountListContainerComponent implements OnInit {
   public BankAccountList$: Observable<any> = of();
 
 
-                            // api service 
+ // api service 
   constructor( private Accountservice:AccountService) {
     this.BankAccountList$ = this.Accountservice.Accountlist();
    }

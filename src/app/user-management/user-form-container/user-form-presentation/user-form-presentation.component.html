@@ -1,0 +1,70 @@
+<div class="container-fluid">
+    <div class="col align-items-start">
+      <div class="col">
+        <h1> <span class="text-success">New-Account-Form</span></h1>
+      </div><div class="container">
+<!-- <form class="row" [formgroup]="userForm" > -->
+  <div class="form-group" >    
+        <div class="col-md-6">
+            <label for="FirstName" class="form-label">FirstName </label>
+            <input type="text" class="form-control" formControlName="FirstName" id="FirstName" required>
+        </div>
+
+        <span  class="text-danger"
+            *ngIf="userFormControl.FirstName.touched  && userFormControl.FirstName.errors?.required">
+             FirstName is Required
+        </span>
+</div>
+<div class="form-group" >
+        <div class="col-md-6">
+            <label for="LastName" class="form-label">Last Name: </label>
+            <input type="text" class="form-control" formControlName="LastName" id="LastName" required>
+        </div>
+        <span  class="text-danger"
+            *ngIf="userFormControl.LastName.touched  &&userFormControl.LastName.errors?.required">
+            LastName is required
+        </span>
+</div>
+<div class="form-group" >
+        <div class="col-md-6">
+            <label for="Email" class="form-label">Email: </label>
+            <input type="text" class="form-control" formControlName="Email" id="Email" required>
+        </div>
+        <span 
+            *ngIf="userFormControl.Email.touched  && userFormControl.Email.errors?.required">
+            Email is required
+        </span>
+</div>
+<div class="form-group" >
+    <div class="col-md-6">
+        <label for="ClientName" class="form-label">ClientName </label>
+        <input type="text" class="form-control" formControlName="ClientName" id="ClientName" required>
+    </div>
+    <span 
+        *ngIf="userFormControl.ClientName.touched  && userFormControl.ClientName.errors?.required">
+        ClientName is required
+    </span>
+</div>
+<div class="form-group" >
+        <div class="col-md-6">
+            <label for="ContactNo" class="form-label">ContactNo No: </label>
+            <input type="text" class="form-control" formControlName="ContactNo" id="ContactNo" required>
+        </div>  
+    </div>
+    <div class="form-group" >
+        <div class="col-md-6">
+            <label for="Office" class="form-label">Office: </label>
+            <select class="form-select" id="Office" formControlName="Office" required>
+                <option selected disabled value="">Choose...</option>
+                <option>Mumbai</option>
+                <option>Valsad</option>
+                <option>Delhi</option>
+                <option>Banglore</option>
+            </select>
+        </div></div>
+        <div class="col-6">
+            <button class="btn btn-primary" type="submit"(click)="Submit()">Submit</button>
+          
+    </div>
+    </form>
+</div>

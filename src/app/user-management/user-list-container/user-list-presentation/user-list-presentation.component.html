@@ -1,0 +1,39 @@
+
+<div class="container-fluid">
+    <div class="col align-items-start">
+      <div class="col">
+        <h1> <span class="text-success">User Details</span></h1>
+      </div>
+      <button class="my-1 btn btn-primary" routerLink="Add">Add</button>
+    </div>
+         <div class="input-group">
+  <div class="form-outline">
+    <input type="search" id="form1" [(ngModel)]="firstName" (ngModelChange)="search()" class="form-control" />
+    <label class="form-label" for="form1">Search</label>
+  </div>
+</div>
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th (click)="sort('id')">id&nbsp;<i class="fa fa-sort"></i></th>
+         <th (click)="sort('firstName')">First Name&nbsp;<i class="fa fa-sort"></i></th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">ContactNo</th>
+        <th scope="col">Office</th>
+        <th scope="col">ClientName</th>
+    </thead>
+     <tbody>                                      
+        <tr *ngFor="let userlist of user| orderBy: key: reserve | paginate:{itemsPerPage:2 ,currentPage:page};">
+        <td>{{userlist.id}}</td>
+        <td>{{userlist.FirstName}}</td>
+        <td>{{userlist.LastName}}</td>
+        <td>{{userlist.Email}}</td>
+        <td>{{userlist.ContactNo}}</td> 
+        <td>{{userlist.Office}}</td>
+        <td>{{userlist.ClientName}}</td>
+       <td >
+      <tr>
+      </tbody>
+      <pagination-controls (pageChange)="page =$event"></pagination-controls>
+  </table>
